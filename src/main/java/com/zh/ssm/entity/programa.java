@@ -1,4 +1,4 @@
-package com.zh.ssm.entity ;
+package com.zh.ssm.entity;
 
 /**
  * Created by DELL on 2016/11/23.
