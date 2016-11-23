@@ -1,9 +1,7 @@
 package com.zh.ssm.web.front;
 
 import com.zh.ssm.entity.Programa;
-import com.zh.ssm.entity.User;
 import com.zh.ssm.service.front.IndexService;
-import com.zh.ssm.service.front.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
