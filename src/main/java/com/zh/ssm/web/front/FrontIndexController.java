@@ -1,6 +1,6 @@
 package com.zh.ssm.web.front;
 
-import com.zh.ssm.entity.Programa;
+import com.zh.ssm.entity.programa;
 import com.zh.ssm.service.front.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ public class FrontIndexController {
 
     @RequestMapping("/main")
     public String get1(Model model){
-        List<Programa> programaList=indexService.findProgramaAll();
+        List<programa> programaList=indexService.findProgramaAll();
         model.addAttribute("programaList",programaList);
         return "front/index";
     }

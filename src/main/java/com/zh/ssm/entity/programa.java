@@ -1,19 +1,19 @@
-package com.zh.ssm.entity;
+package com.zh.ssm.entity ;
 
 /**
  * Created by DELL on 2016/11/23.
  */
-public class Programa {
+public class programa {
     private int programaId;
     private String programaName;
     private String programaDesc;
     private String programaCover;
     private String programaPosition;
 
-    public Programa() {
+    public programa() {
     }
 
-    public Programa(int programaId, String programaName, String programaDesc, String programaCover, String programaPosition) {
+    public programa(int programaId, String programaName, String programaDesc, String programaCover, String programaPosition) {
         this.programaId = programaId;
         this.programaName = programaName;
         this.programaDesc = programaDesc;
