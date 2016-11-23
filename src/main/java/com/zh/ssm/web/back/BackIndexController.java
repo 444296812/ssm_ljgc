@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/back")
 public class BackIndexController {
     @Autowired
-
-
     @RequestMapping("/main")
     public String get1(){
         return "back/index";
