@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--网站上方_头部共享--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="Lj-head">
@@ -15,13 +16,16 @@
 <div class="head-top" id="push">
 <span class="new"><img src="images/icon_01_02.png"></span>
 <ul>
-<li id="f1" class="dq" onclick="changeflash(1)">首页</li>
-<li id="f2" onclick="changeflash(2)">文化古城</li>
-<li id="f3" onclick="changeflash(3)">古城保护</li>
-<li id="f4" onclick="changeflash(4)">古城维护费</li>
-<li id="f5" onclick="changeflash(5)">漫游古城</li>
-<li id="f6" onclick="changeflash(6)">旅游攻略</li>
-<li id="f7" onclick="changeflash(7)">丽江文化</li>
+<%--<li id="f1" class="dq" onclick="changeflash(1)">首页</li>--%>
+<%--<li id="f2" onclick="changeflash(2)">文化古城</li>--%>
+
+        <c:forEach var="each" items="${programaList}">
+            <c:if test="${each.programaPosition=='菜单栏'}">
+               <li id="f1"onclick="changeflash(${each.programaId})">
+                    ${each.programaName}
+               </li>
+            </c:if>
+        </c:forEach>
 </ul>
 </div>
 <!--===================-->

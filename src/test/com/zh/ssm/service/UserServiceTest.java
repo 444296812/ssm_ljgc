@@ -1,4 +1,4 @@
-package com.zh.ssm.service.back;
+package com.zh.ssm.service;
 import com.zh.ssm.entity.User;
 import com.zh.ssm.service.front.UserService;
 import org.junit.Assert;
