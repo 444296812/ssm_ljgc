@@ -1,6 +1,6 @@
 package com.zh.ssm.service.front.impl;
 
-import com.zh.ssm.entity.programa;
+import com.zh.ssm.entity.Programa;
 import com.zh.ssm.service.front.IndexService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class IndexServiceImplTest {
     private IndexService indexService;
     @Test
     public void test(){
-        List<programa> programaList=indexService.findProgramaAll();
+        List<Programa> programaList=indexService.findProgramaAll();
         System.out.println(programaList.size());
         Assert.assertNotNull(programaList);
     }

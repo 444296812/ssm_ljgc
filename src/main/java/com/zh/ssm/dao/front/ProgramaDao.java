@@ -1,6 +1,6 @@
 package com.zh.ssm.dao.front;
 
-import com.zh.ssm.entity.programa;
+import com.zh.ssm.entity.Programa;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -10,8 +10,8 @@ import java.util.List;
  */
 public interface ProgramaDao {
     //    使用mybatis注解方式
-    @Select("select programaId,programaName,programaDesc,programaCover,programaPosition from programa")
-    List<programa> findProgramaAll();
+    @Select("select programaId,programaName,programaDesc,programaCover,programaPosition from Programa")
+    List<Programa> findProgramaAll();
 
 
 //    @Select("select id,name,password,email from user where id=#{id}")
