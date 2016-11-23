@@ -7,7 +7,7 @@
 				%-5level %logger{80} - %msg%n</Pattern>
 		</encoder>
 	</appender>
-	<logger name="com.tosit.ssh" level="debug" />
+	<logger name="com.zh.ssm" level="debug" />
 	<logger name="org.springframework" level="error" />
 	<logger name="org.hibernate.type" level="error" />
 	<root>
