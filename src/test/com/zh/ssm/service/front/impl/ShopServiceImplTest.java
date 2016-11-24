@@ -26,4 +26,11 @@ public class ShopServiceImplTest {
         Assert.assertNotNull(goodsList);
         System.out.println(goodsList.get(1).getShop().getShopTxt());
     }
+    @Test
+    public void findStay(){
+        List<Goods> goodsList=shopService.findStay();
+        Assert.assertNotNull(goodsList);
+        System.out.println(goodsList.size());
+        System.out.println(goodsList.get(2).getShop().getShopArea());
+    }
 }

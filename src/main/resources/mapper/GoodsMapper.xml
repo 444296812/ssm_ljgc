@@ -44,4 +44,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="findBar" resultMap="goodsShopRM" parameterType="int">
         select * from Goods g left join shop s on s.shopId=g.shop_id
 	</select>
+	<select id="findStay" resultMap="goodsShopRM" parameterType="int">
+		select * from Goods g left join shop s on s.shopId=g.shop_id
+	</select>
 </mapper>

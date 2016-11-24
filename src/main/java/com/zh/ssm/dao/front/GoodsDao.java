@@ -10,5 +10,8 @@ import java.util.List;
  */
 public interface GoodsDao {
 //    @Select("select * from Goods g left join shop s on s.shopId=g.shop_id")
+    //丽江美食
     List<Goods> findBar();
+    //丽江住宿
+    List<Goods> findStay();
 }

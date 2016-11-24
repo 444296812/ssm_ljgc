@@ -18,4 +18,8 @@ public class ShopServiceImpl implements ShopService{
     public List<Goods> findBar() {
         return goodsDao.findBar();
     }
+
+    public List<Goods> findStay() {
+        return goodsDao.findStay();
+    }
 }

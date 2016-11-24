@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface ShopService {
     List<Goods> findBar();
+
+    List<Goods> findStay();
 }

@@ -17,10 +17,18 @@ import java.util.List;
 public class FrontShopController {
     @Autowired
     private ShopService shopService;
+    //丽江美食数据
     @RequestMapping("/ljBar")
     public String findBar(Model model){
         List<Goods> goodsList=shopService.findBar();
         model.addAttribute("goodsList",goodsList);
         return "front/Lj-Bar";
+    }
+    //丽江住宿数据
+    @RequestMapping("/ljStay")
+    public String findStay(Model model){
+        List<Goods> goodsList=shopService.findStay();
+        model.addAttribute("goodsList",goodsList);
+        return "front/Lj-stay";
     }
 }

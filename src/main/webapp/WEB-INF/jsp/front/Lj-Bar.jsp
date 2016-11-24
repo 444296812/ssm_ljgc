@@ -54,6 +54,8 @@
                        <div class="Bar-flash">
                            <!--显示大图 begin-->
                            <div class="Bar-big"><a href="javascript:"><img id="bigImg" class="pic-img" width="176" height="127" src="${each.goodsImg}"/></a></div>
+                           </c:if>
+                           </c:forEach>
                            <!--显示大图 end-->
                            <!--Bar-circle begin-->
                            <div class="Bar-circle">
@@ -76,6 +78,8 @@
                        <!--详情 begin-->
                        <div class="Bar-Text">
                           <h1 class="Bar-h1"><a href="javascript:">
+                              <c:forEach var="each" items="${goodsList}">
+                              <c:if test="${each.goodsId==1}">
                           ${each.goodsTitle}
                           </a></h1>
                           <span class="Bar-Txt">
@@ -101,6 +105,8 @@
                                <c:if test="${each.goodsId==2}">
                            <!--显示大图 begin-->
                            <div class="Bar-big"><a href="javascript:"><img id="bigImg" class="pic-img" width="176" height="127" src="${each.goodsImg}"/></a></div>
+                          </c:if>
+                           </c:forEach>
                            <!--显示大图 end-->
                            
                            <!--Bar-circle begin-->
@@ -126,6 +132,8 @@
                        <!--详情 begin-->
                        <div class="Bar-Text">
                           <h1 class="Bar-h1"><a href="javascript:">
+                       <c:forEach var="each" items="${goodsList}">
+                            <c:if test="${each.goodsId==2}">
                              ${each.goodsTitle}
                               <%--香辣牛蹄筋--%>
                                </a></h1>
@@ -139,10 +147,9 @@
                           <i class="Bar-Text-i">电话：
                                ${each.shop.shopPhone}
                                <%--13880134567--%>
-                              </c:if>
-                              </c:forEach>
-                               </i>
-                       </div>
+                                </c:if>
+                           </c:forEach>
+                              </div>
                        <!--详情 end-->
 
                    </li>
