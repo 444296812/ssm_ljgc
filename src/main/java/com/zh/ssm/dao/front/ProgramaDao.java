@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface ProgramaDao {
     //    使用mybatis注解方式
-    @Select("select programaId,programaName,programaDesc,programaCover,programaPosition from Programa")
+//    @Select("select programaId,programaName,programaDesc,programaCover,programaPosition from Programa")
     List<Programa> findProgramaAll();
 
 

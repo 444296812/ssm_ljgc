@@ -21,7 +21,7 @@ public class FrontIndexController {
     private IndexService indexService;
 
     @RequestMapping("/main")
-    public String get1(Model model){
+    public String findProgramaAll(Model model){
         List<Programa> programaList=indexService.findProgramaAll();
         model.addAttribute("programaList",programaList);
         return "front/index";
