@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -41,31 +42,69 @@
             <div class="w786">
             
               <!--=================-->
-              <div class="roll-top"><span>古城动态</span><a href="javascript:">更多 > </a></div>  
+               <%--首页中部古城动态模块--%>
+              <div class="roll-top">
+                 <c:forEach var="each" items="${programaList}">
+                    <c:if test="${each.programaName=='古城动态'}">
+                       <span>${each.programaName}</span><a href="javascript:">${each.programaDesc} > </a>
+                    </c:if>
+                 </c:forEach>
+
+              </div>
               <!--=================-->
              
               <!--=================-->
               <div class="Lj-news">
                <div class="news">
                  <ul>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">云岭职工跨越发展先锋活动暨云岭职工人才工程示范点</a></li>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
-                   <li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>
+                    <c:forEach var="each" items="${programaList}">
+                       <c:if test="${each.programaName=='古城动态'}">
+                          <c:forEach var="content" items="${each.contents}">
+                             <c:if test="${content.contentAddr=='首页中部内容标题'}">
+                                <li><img src="images/icon_01_38.jpg"/><a href="javascript:">${content.contentName}</a></li>
+                             </c:if>
+                          </c:forEach>
+                       </c:if>
+                    </c:forEach>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>--%>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>--%>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">云岭职工跨越发展先锋活动暨云岭职工人才工程示范点</a></li>--%>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>--%>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>--%>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>--%>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>--%>
+                   <%--<li><img src="images/icon_01_38.jpg"/><a href="javascript:">召开局党组扩大会议暨拍砖会意见建议交</a></li>--%>
                  </ul>
                 </div>
                 <div class="news-flash">
-                   <div class="news-pad"><a href="javascript:"><img src="images/img_01_10.jpg" width="360" height="245"/></a></div>
+                   <div class="news-pad">
+                      <c:forEach var="each" items="${programaList}">
+                         <c:if test="${each.programaName=='古城动态'}">
+                            <c:forEach var="content" items="${each.contents}">
+                               <c:if test="${content.contentAddr=='首页中部图片上'}">
+                                  <a href="javascript:"><img src="${content.contentTitleImg}" width="360" height="245"/></a>
+                               </c:if>
+                            </c:forEach>
+                         </c:if>
+                      </c:forEach>
+                   </div>
                 </div>
-                <div class="advert"><a href="javascript:"><img src="images/img_01_30.jpg"/></a></div>
+                <div class="advert">
+                   <c:forEach var="each" items="${programaList}">
+                   <c:if test="${each.programaName=='古城动态'}">
+                      <c:forEach var="content" items="${each.contents}">
+                         <c:if test="${content.contentAddr=='首页中部图片下'}">
+                            <a href="javascript:"><img src="${content.contentTitleImg}"/></a>
+                         </c:if>
+                      </c:forEach>
+                   </c:if>
+                </c:forEach>
+                </div>
               </div>
               <!--=================-->
               
               <!--=================-->
+               <%--首页中部古城保护模块--%>
               <div class="Lj-manage">
                  <div class="manage-top">
                     <ul>
@@ -289,6 +328,6 @@
       <!--total-width end-->
    
    </div> 
-   <!--屏蔽右键,F12 begin--><script type="text/javascript" src="js/Shielding-key.js"></script><!--屏蔽右键,F12 end-->
+   <%--<!--屏蔽右键,F12 begin--><script type="text/javascript" src="js/Shielding-key.js"></script><!--屏蔽右键,F12 end-->--%>
 </body>
 </html>
