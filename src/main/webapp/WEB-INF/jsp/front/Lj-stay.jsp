@@ -52,8 +52,6 @@
             <div class="w786">
             <c:forEach var="each" items="${goodsList}">
               <c:if test="${each.goodsId==3}">
-
-
              <!--title begin-->
              <div class="Lj-news-title"><span><img src="${each.shop.shopImg}"/></span><div>${each.shop.shopName}</div></div>
                   </c:if>

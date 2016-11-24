@@ -14,4 +14,6 @@ public interface GoodsDao {
     List<Goods> findBar();
     //丽江住宿
     List<Goods> findStay();
+   //三级页面住宿
+    List<Goods> findStayThree();
 }

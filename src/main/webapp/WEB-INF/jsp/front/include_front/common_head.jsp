@@ -151,10 +151,10 @@
             <c:forEach var="content" items="${each.contents}">
                 <%--条件判断如果是文化古城菜单栏里面的内容就展示在这里--%>
                 <c:if test="${content.contentId==13}">
-                    <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
+                    <a href="ljBar"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
                 </c:if>
                 <c:if test="${content.contentId==14}">
-                    <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
+                    <a href="ljStay"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
                 </c:if>
                 <c:if test="${content.contentId==15}">
                     <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
