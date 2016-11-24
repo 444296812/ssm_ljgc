@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 配置命名空间，区别名称 -->
+<mapper namespace="com.zh.ssm.dao.front.GoodsDao">
+	<!-- SQL片段 -->
+	<sql id="cols">goodsId,goodsTitle,goodsRoomType,goodsBedType,goodsEarlyMeal,goodsWiff,goodsRoomPrice,goodsPreferential,goodsImg</sql>
+
+	<!-- 中间，对象的属性和结果集的字段之间的对应关系 -->
+	<resultMap type="Goods" id="goodsRM">
+		<!-- 主键映射 -->
+		<id property="goodsId" column="goodsId" />
+		<!-- 普通字段 property指实体的属性；column结果集的字段名称 -->
+		<result property="goodsTitle" column="goodsTitle" />
+		<result property="goodsRoomType" column="goodsRoomType"/>
+		<result property="goodsBedType" column="goodsBedType"/>
+		<result property="goodsEarlyMeal" column="goodsEarlyMeal"/>
+		<result property="goodsWiff" column="goodsWiff"/>
+		<result property="goodsRoomPrice" column="goodsRoomPrice"/>
+		<result property="goodsPreferential" column="goodsPreferential"/>
+		<result property="goodsImg" column="goodsImg"/>
+
+	</resultMap>
+
+	<!--查询出商家信息-->
+	<resultMap id="goodsShopRM" type="Goods" extends="goodsRM">
+
+		<association property="shop" javaType="Shop">
+			<id property="shopId" column="shopId"/>
+			<result property="shopName" column="shopName"/>
+			<result property="shopAddress" column="shopAddress"/>
+			<result property="shopPhone" column="shopPhone"/>
+			<result property="shopTxt" column="shopTxt"/>
+			<result property="shopFacility" column="shopFacility"/>
+            <result property="shopArea" column="shopArea"/>
+			<result property="shopPrice" column="shopPrice"/>
+			<result property="shopImg" column="shopImg"/>
+
+		</association>
+
+	</resultMap>
+
+	<select id="findBar" resultMap="goodsShopRM" parameterType="int">
+        select * from Goods g left join shop s on s.shopId=g.shop_id
+	</select>
+</mapper>
