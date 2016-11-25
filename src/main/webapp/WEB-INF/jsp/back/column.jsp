@@ -53,7 +53,7 @@
 
 <body>
 
-  <jsp:include page="include_back/common_headAndleft.jsp"/>
+	<jsp:include page="include_back/common_headAndleft.jsp"/>
 	
 	<section id="main" class="column">
 		

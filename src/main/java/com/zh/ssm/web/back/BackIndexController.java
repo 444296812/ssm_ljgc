@@ -15,10 +15,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/back")
 public class BackIndexController {
     @Autowired
-    @RequestMapping("/main")
+//    首页-流量统计
+    @RequestMapping("/index")
     public String get1(){
         return "back/index";
     }
-
+//    栏目管理
+    @RequestMapping("/column")
+    public String column(){
+        return "back/column";
+    }
+//    订单管理
+    @RequestMapping("/orders")
+    public String orders(){
+        return "back/orders";
+    }
+//   商家管理
+    @RequestMapping("/seller")
+    public String seller(){
+        return "back/seller";
+    }
 
 }
