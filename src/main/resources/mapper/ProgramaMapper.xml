@@ -27,7 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<result property="contentTxt" column="contentTxt"/>
 			<result property="contentTitleImg" column="contentTitleImg"/>
 			<result property="contentAddr" column="contentAddr"/>
-			<result property="contentPhone" column="contentPhone"/>
+			<result property="contentOther" column="contentOther"/>
 		</collection>
 	</resultMap>
 

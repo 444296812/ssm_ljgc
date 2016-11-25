@@ -10,19 +10,19 @@ public class Content {
     private String contentTxt;//内容详情
     private String contentTitleImg;//内容标题图
     private String contentAddr;//内容位置属于哪里
-    private String contentPhone;//内容电话
+    private String contentOther;//其他内容
 
     public Content() {
     }
 
-    public Content(int contentId, String contentName, String contentDesc, String contentTxt, String contentTitleImg, String contentAddr, String contentPhone) {
+    public Content(int contentId, String contentName, String contentDesc, String contentTxt, String contentTitleImg, String contentAddr, String contentOther) {
         this.contentId = contentId;
         this.contentName = contentName;
         this.contentDesc = contentDesc;
         this.contentTxt = contentTxt;
         this.contentTitleImg = contentTitleImg;
         this.contentAddr = contentAddr;
-        this.contentPhone = contentPhone;
+        this.contentOther = contentOther;
     }
 
     public int getContentId() {
@@ -73,11 +73,11 @@ public class Content {
         this.contentAddr = contentAddr;
     }
 
-    public String getContentPhone() {
-        return contentPhone;
+    public String getContentOther() {
+        return contentOther;
     }
 
-    public void setContentPhone(String contentPhone) {
-        this.contentPhone = contentPhone;
+    public void setContentOther(String contentOther) {
+        this.contentOther = contentOther;
     }
 }

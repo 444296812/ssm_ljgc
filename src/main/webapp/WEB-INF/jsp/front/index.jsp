@@ -90,7 +90,7 @@
                    </div>
                 </div>
                 <div class="advert">
-                   <c:forEach var="each" items="${programaList}">
+                <c:forEach var="each" items="${programaList}">
                    <c:if test="${each.programaName=='古城动态'}">
                       <c:forEach var="content" items="${each.contents}">
                          <c:if test="${content.contentAddr=='首页中部图片下'}">

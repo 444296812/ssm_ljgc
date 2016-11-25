@@ -132,6 +132,18 @@
     </c:forEach>
 
 <div class="conduct-text">
+    <%--循环遍历先遍历出Programa实体--%>
+    <c:forEach var="each" items="${programaList}">
+        <c:if test="${each.programaName=='漫游古城'}">
+            <%--再次循环遍历出Programa实体里面的contents--%>
+            <c:forEach var="content" items="${each.contents}">
+                <%--条件判断如果是文化古城菜单栏里面的内容就展示在这里--%>
+                <c:if test="${content.contentId==113}">
+                    <a href="example/front/ljI"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
+                </c:if>
+            </c:forEach>
+        </c:if>
+    </c:forEach>
 <!--A标签可复制到这里-->
 </div>
 </div>
@@ -163,7 +175,7 @@
                     <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
                 </c:if>
                 <c:if test="${content.contentId==17}">
-                    <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
+                    <a href="example/front/ljL"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
                 </c:if>
                 <c:if test="${content.contentId==18}">
                     <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
@@ -200,10 +212,13 @@
             <c:forEach var="content" items="${each.contents}">
                 <%--条件判断如果是文化古城菜单栏里面的内容就展示在这里--%>
                 <c:if test="${content.contentId==20}">
-                    <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
+                    <a href="example/front/ljN"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
                 </c:if>
                 <c:if test="${content.contentId==21}">
-                    <a href="javascript:"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
+                    <a href="example/front/ljCP"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
+                </c:if>
+                <c:if test="${content.contentId==114}">
+                    <a href="example/front/ljV"><div class="img"><img src="${content.contentTitleImg}"/></div><span>${content.contentName}</span></a>
                 </c:if>
             </c:forEach>
         </c:if>
