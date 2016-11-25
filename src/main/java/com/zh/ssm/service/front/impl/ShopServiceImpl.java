@@ -2,6 +2,7 @@ package com.zh.ssm.service.front.impl;
 
 import com.zh.ssm.dao.front.GoodsDao;
 import com.zh.ssm.entity.Goods;
+import com.zh.ssm.page.Pagination;
 import com.zh.ssm.service.front.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +16,14 @@ import java.util.List;
 public class ShopServiceImpl implements ShopService{
     @Autowired
     private GoodsDao goodsDao;
+
     public List<Goods> findBar() {
         return goodsDao.findBar();
     }
 
+//        public Pagination findBar(Integer pageNo, Integer pageSize) {
+//        return goodsDao.findBar();
+//    }
     public List<Goods> findStay() {
         return goodsDao.findStay();
     }

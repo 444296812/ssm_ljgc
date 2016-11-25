@@ -2,6 +2,7 @@ package com.zh.ssm.web.front;
 
 import com.zh.ssm.entity.Goods;
 import com.zh.ssm.entity.Programa;
+import com.zh.ssm.page.Pagination;
 import com.zh.ssm.service.front.IndexService;
 import com.zh.ssm.service.front.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,20 @@ public class FrontShopController {
         model.addAttribute("programaList",programaList);
         return "front/Lj-Bar";
     }
+//    public String findBar(Integer pageNo,Integer pageSize,Model model){
+//        if(pageNo==null){
+//            pageNo=1;
+//        }
+//        if(pageSize==null){
+//            pageSize=1;
+//        }
+//        Pagination pagination=shopService.findBar(pageNo,pageSize);
+//        model.addAttribute("goodsList",pagination);
+//
+//        List<Programa> programaList=indexService.findProgramaAll();
+//        model.addAttribute("programaList",programaList);
+//        return "front/Lj-Bar";
+//    }
     //二级页面丽江住宿数据
     @RequestMapping("/ljStay")
     public String findStay(Model model){

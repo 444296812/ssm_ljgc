@@ -33,4 +33,10 @@ public class ShopServiceImplTest {
         System.out.println(goodsList.size());
         System.out.println(goodsList.get(2).getShop().getShopArea());
     }
+    @Test
+    public void findStayThree(){
+        List<Goods> goodsList=shopService.findStayThree();
+        Assert.assertNotNull(goodsList);
+        System.out.println(goodsList.get(0).getShop().getShopArea());
+    }
 }

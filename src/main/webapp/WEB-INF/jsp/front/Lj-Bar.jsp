@@ -154,11 +154,20 @@
 
                    </li>
                 </ul>
+                 <div class="Lj-news-page">共${each.totalPage}页记录
+                     <a href="ljBar?pageNo=1">首页</a>
+                     <c:if test="${!each.firstPage}">
+                         <a href="ljBar?pageNo=${each.prePage}" id="nextpage" title="" accesskey="n">上一页</a>&nbsp;
+                     </c:if>
+                     <c:if test="${!each.lastPage}">
+                         <a href="ljBar?pageNo=${each.nextPage}" id="nextpage" title="" accesskey="n">下一页</a>&nbsp;
+                     </c:if>
 
-                <div class="Lj-news-page">共6条记录 1/1页<a href="javascript:">首页</a><a href="javascript:">上一页</a><a href="javascript:">下一页</a><a href="javascript:">尾页</a>第<select class="select"><option>1</option><option>2</option></select>页</div>
-             </div>
+                     <a href="ljBar?pageNo=${each.totalPage}">尾页</a>
+                 </div>
+                <%--<div class="Lj-news-page">共6条记录 1/1页<a href="javascript:">首页</a><a href="javascript:">上一页</a><a href="javascript:">下一页</a><a href="javascript:">尾页</a>第<select class="select"><option>1</option><option>2</option></select>页</div>--%>
              <!--text end-->
-              
+              </div>
               
             </div>
             <!--right end-->

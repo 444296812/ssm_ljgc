@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -47,8 +48,16 @@
              
              <!--=======================-->
              <div class="video-area">
-                <span>古城银装素裹</span>
-                <div><a href="javascript:"><img src="images/img_04_01.jpg"/></a></div>
+                 <c:forEach var="each" items="${programaList}">
+                     <c:if test="${each.programaName=='丽江文化'}">
+                         <c:forEach var="content" items="${each.contents}">
+                             <c:if test="${content.contentAddr=='二级古城视频'}">
+                                         <span>${content.contentName}</span>
+                                 <div><a href="javascript:"><img src="${content.contentTitleImg}"/></a></div>
+                             </c:if>
+                         </c:forEach>
+                     </c:if>
+                 </c:forEach>
              </div>
              <!--=======================-->
              
@@ -57,8 +66,18 @@
                <div class="video-more"><span><a href="javascript:">查看更多</a><img src="images/icon_04_01.jpg"/></span></div>
                <div class="video-text">
                  <ul>
-                    <li><a href="javascript:"><img src="images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城茶马古道</a></span></li>
-                    <li><a href="javascript:"><img src="images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城</a></span></li>
+                     <c:forEach var="each" items="${programaList}">
+                         <c:if test="${each.programaName=='丽江文化'}">
+                             <c:forEach var="content" items="${each.contents}">
+                                 <c:if test="${content.contentAddr=='查看更多二级古城视频'}">
+                                     <li><a href="javascript:"><img src="${content.contentOther}"/></a>
+                                     <span><a href="javascript:">${content.contentName}</a></span></li>
+                                 </c:if>
+                             </c:forEach>
+                         </c:if>
+                     </c:forEach>
+                    <%--<li><a href="javascript:"><img src="images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城茶马古道</a></span></li>--%>
+                    <%--<li><a href="javascript:"><img src="images/img_04_02.jpg"/></a><span><a href="javascript:">畅游丽江古城</a></span></li>--%>
                  </ul>
                </div>
              </div>
