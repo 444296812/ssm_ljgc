@@ -56,14 +56,11 @@
 	<jsp:include page="include_back/common_headAndleft.jsp"/>
 	
 	<section id="main" class="column">
-		
-		<!--<h4 class="alert_info">Welcome to the free MediaLoot admin panel template, this could be an informative message.</h4>-->
-
 		<article class="module width_full">
 			<header><h3 class="tabs_involved">查看流量</h3>
 				<ul class="tabs">
-					<li><a href="#tab1">帖子</a></li>
-					<li><a href="#tab2">评论</a></li>
+					<li><a href="#tab1">刷新</a></li>
+					<%--<li><a href="#tab2">评论</a></li>--%>
 				</ul>
 			</header>
 
@@ -72,109 +69,28 @@
 					<table class="tablesorter" cellspacing="0">
 						<thead>
 						<tr>
-							<th></th>
-							<th>Entry Name</th>
-							<th>Category</th>
-							<th>Created On</th>
-							<th>Actions</th>
+							<th>栏目编号</th>
+							<th>栏目名</th>
+							<th>栏目描述</th>
+							<th>栏目封面</th>
+							<th>操作</th>
 						</tr>
 						</thead>
 						<tbody>
 						<tr>
-							<td><input type="checkbox"></td>
-							<td>Lorem Ipsum Dolor Sit Amet</td>
-							<td>Articles</td>
-							<td>5th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Ipsum Lorem Dolor Sit Amet</td>
-							<td>Freebies</td>
-							<td>6th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Sit Amet Dolor Ipsum</td>
-							<td>Tutorials</td>
-							<td>10th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Dolor Lorem Amet</td>
-							<td>Articles</td>
-							<td>16th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Dolor Lorem Amet</td>
-							<td>Articles</td>
-							<td>16th April 2011</td>
+							<%--<td><input type="checkbox"></td>--%>
+							<td>1</td>
+							<td>文化古城</td>
+							<td>我是栏目描述</td>
+							<td>我是栏目封面</td>
 							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
 						</tr>
 						</tbody>
 					</table>
 				</div><!-- end of #tab1 -->
 
-				<div id="tab2" class="tab_content">
-					<table class="tablesorter" cellspacing="0">
-						<thead>
-						<tr>
-							<th></th>
-							<th>Comment</th>
-							<th>Posted by</th>
-							<th>Posted On</th>
-							<th>Actions</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Lorem Ipsum Dolor Sit Amet</td>
-							<td>Mark Corrigan</td>
-							<td>5th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Ipsum Lorem Dolor Sit Amet</td>
-							<td>Jeremy Usbourne</td>
-							<td>6th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Sit Amet Dolor Ipsum</td>
-							<td>Super Hans</td>
-							<td>10th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Dolor Lorem Amet</td>
-							<td>Alan Johnson</td>
-							<td>16th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>Dolor Lorem Amet</td>
-							<td>Dobby</td>
-							<td>16th April 2011</td>
-							<td><input type="image" src="imgs/icn_edit.png" title="Edit"><input type="image" src="imgs/icn_trash.png" title="Trash"></td>
-						</tr>
-						</tbody>
-					</table>
-
-				</div><!-- end of #tab2 -->
-
 			</div>
 		</article><!-- end of stats article -->
-		<%--<div class="clear"></div>--%>
-		<%--<div class="spacer"></div>--%>
 	</section>
 </body>
 </html>
